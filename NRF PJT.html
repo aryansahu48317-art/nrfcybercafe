@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NRF CYBER CAFE | Premium Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050505;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --primary: #00b5fc;
+      --dark: #000000;
+      --glass: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 0 25px rgba(0, 181, 252, 0.25);
+    }
+
+    /* Animated Gradient Background */
+    .animated-bg {
+      background: linear-gradient(-45deg, #000000, #00111a, #00b5fc, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      padding: 80px 8%;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #00b5fc, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+      font-size: 15px;
+    }
+
+    /* TOP HEADER */
+    .top-header {
+      width: 100%;
+      padding: 10px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00b5fc, #fff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .datetime {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 15px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.4s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px) scale(1.08);
+      background: var(--primary);
+      box-shadow: 0 0 18px rgba(0,181,252,0.7);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 59px;
+      z-index: 999;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .logo span {
+      color: var(--primary);
+      text-shadow: 0 0 12px rgba(0,181,252,0.7);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background: var(--primary);
+      transition: 0.4s;
+      box-shadow: 0 0 10px var(--primary);
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-btn {
+      padding: 12px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: linear-gradient(90deg, #00b5fc, #0077ff);
+      box-shadow: 0 0 20px rgba(0,181,252,0.35);
+      transition: 0.4s;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 28px rgba(0,181,252,0.6);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding-top: 60px;
+    }
+
+    .hero-content {
+      flex: 1;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero-content .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: rgba(0,181,252,0.12);
+      color: var(--primary);
+      border: 1px solid rgba(0,181,252,0.3);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+      text-shadow: 0 0 20px rgba(0,181,252,0.5);
+    }
+
+    .hero-content p {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.4s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #00b5fc, #0077ff);
+      color: #fff;
+      box-shadow: 0 0 22px rgba(0,181,252,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 30px rgba(0,181,252,0.65);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0,181,252,0.1);
+      border-color: rgba(0,181,252,0.4);
+    }
+
+    .hero-visual {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      animation: floatBox 4s ease-in-out infinite;
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 520px;
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 40px rgba(0,181,252,0.12);
+    }
+
+    .screen {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(-45deg, #000, #00111a, #00b5fc, #000);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .screen::before {
+      content: "Fast Internet • Online Services • Printing • CSC Work";
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 830px;
+  overflow: hidden;
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: white;
+  background: linear-gradient(90deg, rgba(0,181,252,0.8), rgba(0,0,0,0.8));
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, #00b5fc, #000000);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+/* Mobile */
+@media(max-width: 600px){
+  .slider { height: 200px; }
+  .caption { font-size: 12px; left: 10px; }
+}
+    /* SERVICES */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      padding: 30px 25px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.4s;
+      backdrop-filter: blur(10px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0,181,252,0.18);
+      border-color: rgba(0,181,252,0.3);
+    }
+
+    .service-card i {
+      font-size: 34px;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ABOUT / WHY */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-box {
+      padding: 35px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .about-box h3 {
+      font-size: 30px;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .about-box p {
+      color: #ccc;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-list div {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(0,181,252,0.08);
+      border: 1px solid rgba(0,181,252,0.18);
+    }
+
+    /* COUNTERS */
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .counter-box {
+      text-align: center;
+      padding: 35px 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .counter-box h3 {
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .counter-box p {
+      color: #ddd;
+      font-size: 15px;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .price-card {
+      padding: 35px 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0,181,252,0.2);
+      border-color: rgba(0,181,252,0.3);
+    }
+
+    .price-card.popular {
+      border: 1px solid rgba(0,181,252,0.45);
+      box-shadow: 0 0 30px rgba(0,181,252,0.18);
+    }
+
+    .price-card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .price-card .price {
+      font-size: 40px;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .price-card ul li {
+      padding: 8px 0;
+      color: #ccc;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* TESTIMONIAL */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .testimonial-card {
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .testimonial-card p {
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card h4 {
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    /* CONTACT */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-box, .contact-form {
+      padding: 35px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-box h3, .contact-form h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      color: #ccc;
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    .contact-form form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #ffffff;
+      background: linear-gradient(135deg, #000000, #00b5fc);
+      color: #ffffff;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+      resize: none;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 8%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #bbb;
+      font-size: 14px;
+      background: #030303;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatBox {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero,
+      .about-wrap,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      .slide-content h2 {
+        font-size: 34px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .top-header, .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .navbar {
+        top: 86px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      section {
+        padding: 60px 5%;
+      }
+
+      .top-header, .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .slider {
+        height: 340px;
+      }
+
+      .slide-content h2 {
+        font-size: 26px;
+      }
+
+      .slide-content p {
+        font-size: 14px;
+      }
+
+      .top-right {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+/* Music Button */
+.music-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #22c55e, #4ade80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+  position: relative;
+}
+
+/* Hover Smooth */
+.music-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 35px rgba(34,197,94,0.7);
+}
+
+/* Click Effect */
+.music-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pulse Animation */
+.playing {
+  animation: pulse 1.2s infinite;
+}
+
+/* Glow Ring */
+.music-btn::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  border: 2px solid rgba(74, 222, 128, 0.4);
+  animation: ripple 1.5s infinite;
+  opacity: 0;
+}
+
+.playing::after {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #22c55e; }
+  50% { box-shadow: 0 0 30px #4ade80; }
+  100% { box-shadow: 0 0 10px #22c55e; }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+  </style>
+</head>
+<body>
+<!-- Hidden Audio -->
+<div class="music-btn" id="btn">▶</div>
+
+<audio id="music">
+  <source src="https://pub-1407f82391df4ab1951418d04be76914.r2.dev/uploads/967d8d9c-ace6-42f1-a8c9-bfab8e8c69ee.mp3" type="audio/mpeg">
+</audio>
+  <!-- TOP HEADER -->
+  <div class="top-header animated-bg">
+    <div class="logo">
+      <img src="https://image2url.com/r2/default/files/1775935360595-01bb0690-c976-4738-99fa-164f9030dc0b.png" alt="NRF CYBER CAFE Logo">
+    </div>
+    <div class="top-right">
+      <div class="datetime" id="liveDateTime">Loading...</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/aryansahu3188/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/netro_reflex.ff/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://whatsapp.com/channel/0029Vb7fEYgLI8YXqw28lu40" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com/@nrfcybercafe?si=xMKxwcJ3ccUnZk6O" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/nrfcybercafe" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar animated-bg">
+    <div class="logo">NRF <span>CYBER CAFE</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#slider">Highlight</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Get Service</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="badge">Premium Digital Service Center</span>
+      <h1>Welcome to <span>NRF CYBER CAFE</span><br>Fast, Smart & Trusted Online Services</h1>
+      <p>
+        Get all your online work done in one place — printing, scanning, internet browsing,
+        government forms, online registrations, CSC services, bill payments, PAN services,
+        and much more with ultra-fast support and premium customer experience.
+      </p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-secondary">Contact Now</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="screen"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER -->
+ <div class="slider">
+
+  <div class="slide active">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20264/417b1a4c151c7fcf2afb73afeaaefa16.jpg">
+    <div class="caption">Welcome to Your Website</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202210/1e84951ea4e43a94485c30851c151ad2.jpg">
+    <div class="caption">Latest Updates & News</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202512/c8f8cb19e28a2f661d6528e4fc3ee58f.jpg">
+    <div class="caption">Check Results Easily</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20257/4c431ff5149fa0e3066138b43f084da4.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202210/14ba3020f1a1bf8de2142925bda064d2.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b256367962c4dd22384c89a73c6de3d5.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://th.bing.com/th/id/R.7ec453e1dfb447a6f55f3b69e3e69f62?rik=OwucVNuNHs49iA&riu=http%3a%2f%2ffreefiremobile-a.akamaihd.net%2fffwebsite%2fimages%2findex%2fchar_caroline.jpg&ehk=umLw07UXEdCdjmUz7m4CmsmVGX5tMttrH4BgbzHQtYY%3d&risl=&pid=ImgRaw&r=0">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://images.hdqwalls.com/wallpapers/garena-free-fire-4k-v8.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20264/c57c0a509dd55e527fd73a89d3aae479.jpeg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20264/3e044317c548dcf45a923c0d2ab41655.jpeg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20264/0b4a1faa98d337705d45733891ba1d24.jpeg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/ecf7482d5d6d2569ffebee8ff7f4f952.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/982b0fd35d4e131e523ed136a4e0b3a9.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/c56254229276f9649b87bebbdec141a4.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/34b22e4e1f3064fc3b3785a953ff7d9c.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/40dc8cf32e993a0053d20583dae72f11.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+   <div class="slide">
+    <img src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b59f02edf1d8a8ce197fe77c6b753b98.jpg">
+    <div class="caption">Fast Internet & Printing Services</div>
+  </div>
+
+  <button class="btn prev" onclick="changeSlide(-1)">❮</button>
+  <button class="btn next" onclick="changeSlide(1)">❯</button>
+
+  <div class="dots"></div>
+
+</div>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>All digital and documentation services available at NRF CYBER CAFE with fast processing and trusted support.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <i class="fas fa-wifi"></i>
+        <h3>Internet Browsing</h3>
+        <p>High-speed internet access for students, professionals, and online applications.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-print"></i>
+        <h3>Print & Scan</h3>
+        <p>Color/Black print, scanning, photocopy, document upload and file management services.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-id-card"></i>
+        <h3>PAN / ID Services</h3>
+        <p>PAN card application, corrections, digital ID related help and documentation support.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-file-signature"></i>
+        <h3>Online Form Filling</h3>
+        <p>Government forms, job forms, scholarship forms, admission forms and exam registration.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-ticket-alt"></i>
+        <h3>Ticket Booking</h3>
+        <p>Railway, bus, and travel ticket booking with quick confirmation and support.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Bill Payments</h3>
+        <p>Electricity bills, recharge, DTH, online payments and utility payment assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-title">
+      <h2>Why Choose NRF CYBER CAFE?</h2>
+      <p>We combine premium service, fast processing, customer trust, and modern digital support.</p>
+    </div>
+
+    <div class="about-wrap">
+      <div class="about-box">
+        <h3>Your One-Stop Digital Service Hub</h3>
+        <p>
+          NRF CYBER CAFE is designed to provide a premium and smooth experience for all digital services.
+          From internet browsing and online forms to printing, ticket booking, and government portal support,
+          we help you complete everything quickly and correctly.
+        </p>
+        <a href="#contact" class="btn-primary">Get Started</a>
+      </div>
+
+      <div class="about-box">
+        <div class="feature-list">
+          <div>✔ Fast & Secure Internet Facility</div>
+          <div>✔ Affordable Printing & Documentation</div>
+          <div>✔ Trusted Online Form Assistance</div>
+          <div>✔ Government / CSC Related Services</div>
+          <div>✔ Friendly Customer Support</div>
+          <div>✔ Premium Modern Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTERS -->
+  <section>
+    <div class="section-title">
+      <h2>अपना अनुभव</h2>
+      <p>Numbers that show trust, quality, and consistent digital support.</p>
+    </div>
+
+    <div class="counter-grid">
+      <div class="counter-box">
+        <h3 class="counter" data-target="5000">0</h3>
+        <p>Happy Customers</p>
+      </div>
+      <div class="counter-box">
+        <h3 class="counter" data-target="12000">0</h3>
+        <p>Forms Submitted</p>
+      </div>
+      <div class="counter-box">
+        <h3 class="counter" data-target="35000">0</h3>
+        <p>Prints Completed</p>
+      </div>
+      <div class="counter-box">
+        <h3 class="counter" data-target="8">0</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="section-title">
+      <h2>Popular Pricing</h2>
+      <p>Flexible and affordable service plans for daily cyber cafe needs.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Basic</h3>
+        <div class="price">₹49</div>
+        <ul>
+          <li>Internet Browsing 1 Hour</li>
+          <li>2 Printouts</li>
+          <li>Basic Scan Support</li>
+          <li>Email / Upload Help</li>
+        </ul>
+        <a href="#contact" class="btn-secondary">Choose Plan</a>
+      </div>
+
+      <div class="price-card popular">
+        <h3>Standard</h3>
+        <div class="price">₹149</div>
+        <ul>
+          <li>Form Fill Assistance</li>
+          <li>5 Printouts Included</li>
+          <li>Document Scan + Upload</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Most Popular</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Premium</h3>
+        <div class="price">₹299</div>
+        <ul>
+          <li>आय जाति निवास प्रमाण पत्र</li>
+          <li>पेन कार्ड २.०</li>
+          <li>भुगतान सहायता</li>
+          <li>प्रीमियम डिजिटल सहायता</li>
+        </ul>
+        <a href="#contact" class="btn-secondary">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="section-title">
+      <h2>Customer Feedback</h2>
+      <p>Trusted by students, professionals, and local customers for fast and reliable service.</p>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"बहुत ही बेहतरीन और भरोसेमंद साइबर कैफे। सभी काम बहुत तेजी से हो जाता है।"</p>
+        <h4>-अमन चौधरी</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"बहुत ही बेहतरीन और भरोसेमंद साइबर कैफे। सभी काम बहुत तेजी से हो जाता है।"</p>
+        <h4>-रवि गुप्ता</h4>
+      </div>
+
+      <div class="testimonial-card">
+          <p>"बहुत ही बेहतरीन और भरोसेमंद साइबर कैफे। सभी काम बहुत तेजी से हो जाता है।"</p>
+        <h4>- अभिषेक वर्मा </h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>संपर्क करें</h2>
+      <p>Reach out for all your online services, printing work, and digital support needs.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-box">
+        <h3>एनआरएफ़ साइबर कैफै</h3>
+        <p><strong>पता:</strong> हरीपुर जलालाबाद फैजाबाद अयोध्या , सोहावल , उत्तर प्रदेश</p>
+        <p><strong>फ़ोन:</strong> +91 8950598799</p>
+        <p><strong>ईमेल:</strong> info@nrfcybercafe.com</p>
+        <p><strong>समय:</strong> Mon - Sat | 8:00 AM - 9:00 PM</p>
+        <p>
+          हम सभी के लिए तेज़, सुरक्षित और सस्ती ऑनलाइन सेवाएं प्रदान करते हैं।
+                आज ही हमारे पास प्रीमियम डिजिटल सहायता के लिए आएं।
+        </p>
+      </div>
+
+     <div class="contact-form">
+  <h3>संदेश भेजें</h3>
+
+  <form action="https://formsubmit.co/aryansahu48317@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="आपका नाम" required />
+    <input type="email" name="email" placeholder="आपका ईमेल" required />
+    <input type="text" name="phone" placeholder="आपका फ़ोन" required />
+    <input type="text" name="Aadhaar Number" placeholder="आधार संख्या" required />
+    <input type="text" name="District" placeholder="जिला" required />
+    <input type="text" name="State" placeholder="राज्य" required />
+    <input type="text" name="Service" placeholder="आपको क्या बनवाना है " required />
+    <input type="text" name="Father's Name" placeholder="पिता का नाम" required />
+    <input type="text" name="Village" placeholder="गांव" required />
+    <input type="text" name="Mother's Name" placeholder="माता का नाम" required />
+    <input type="text" name="Income" placeholder="वार्षिक आय" required />
+    <input type="text" name="Date of Birth" placeholder="जन्म की तारीख (DD/MM/YYYY)" required />
+    <textarea name="message" placeholder="आपका संदेश" required></textarea>
+
+    <input type="hidden" name="_subject" value="New Contact Form Message">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit" class="btn-primary">संदेश भेजें</button>
+  </form>
+   </div>
+  </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> NRF CYBER CAFE. All Rights Reserved. | Designed by NRF Team.
+  </footer>
+
+  <script>
+    // LIVE DATE TIME
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      };
+      const date = now.toLocaleDateString('en-IN', options);
+      const time = now.toLocaleTimeString('en-IN');
+      document.getElementById('liveDateTime').innerHTML = `${date} | ${time}`;
+      document.getElementById('year').textContent = now.getFullYear();
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    // SLIDER
+let slides = document.querySelectorAll(".slide");
+let dotsContainer = document.querySelector(".dots");
+let index = 0;
+
+/* Create dots */
+slides.forEach((_, i) => {
+  let dot = document.createElement("span");
+  dot.classList.add("dot");
+  dot.onclick = () => goToSlide(i);
+  dotsContainer.appendChild(dot);
+});
+
+let dots = document.querySelectorAll(".dot");
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+}
+
+function changeSlide(n) {
+  index = (index + n + slides.length) % slides.length;
+  showSlide(index);
+}
+
+function goToSlide(i) {
+  index = i;
+  showSlide(index);
+}
+
+/* Auto Slide */
+setInterval(() => {
+  changeSlide(1);
+}, 4000);
+
+/* Init */
+showSlide(index);
+  </script>
+<script>
+/* MUSIC CONTROL */
+const music = document.getElementById("music");
+const btn = document.getElementById("btn");
+
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    btn.innerHTML = "⏸";
+    btn.classList.add("playing");
+    isPlaying = true;
+  } else {
+    music.pause();
+    btn.innerHTML = "▶";
+    btn.classList.remove("playing");
+    isPlaying = false;
+  }
+});
+</script>
+</body>
+</html>
